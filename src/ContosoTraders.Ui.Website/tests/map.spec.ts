@@ -13,7 +13,7 @@ test.use({
 
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
-  await page.mouse.wheel(0, 4000); // scroll down to map
+  await page.mouse.wheel(0, 10000); // scroll down to map
 });
 
 test.describe('Map', () => {
