@@ -44,7 +44,6 @@ env:
 
 jobs:
   provision:
-    if: github.repository == 'octo-org/octo-repo-prod'
     runs-on: ubuntu-22.04
     env:
       AADUSERNAME: ${{ secrets.AADUSERNAME }}
@@ -625,7 +624,7 @@ jobs:
             ]
 
   playwright-tests-ui:
-    #needs: [provision]
+    needs: [provision]
     timeout-minutes: 20
     runs-on: ubuntu-22.04
     container:
