@@ -44,6 +44,7 @@ env:
 
 jobs:
   provision:
+    if: github.repository == 'octo-org/octo-repo-prod'
     runs-on: ubuntu-22.04
     env:
       AADUSERNAME: ${{ secrets.AADUSERNAME }}
